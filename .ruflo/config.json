@@ -1,0 +1,132 @@
+{
+  "version": "1.0.0",
+  "workspace": "ruflo-workspace",
+  "owner": "antonioneto19",
+  "description": "Ruflo MCP central configuration for all Lideranca Tech projects",
+  
+  "mcp": {
+    "server": {
+      "host": "localhost",
+      "port": 3100,
+      "protocol": "stdio",
+      "autostart": true
+    },
+    "tools": [
+      "code-review",
+      "test-generation",
+      "security-audit",
+      "deployment",
+      "memory-sync",
+      "rag-search",
+      "automation",
+      "lgpd-compliance"
+    ],
+    "resources": [
+      "github-repos",
+      "supabase-schemas",
+      "vercel-projects",
+      "project-docs"
+    ]
+  },
+
+  "swarm": {
+    "topology": "hierarchical",
+    "maxAgents": 7,
+    "consensus": "raft",
+    "memory": {
+      "backend": "agentdb-persistent",
+      "federation": true,
+      "ttl": 2592000
+    }
+  },
+
+  "routing": {
+    "primary": "anthropic",
+    "models": {
+      "architect": "claude-opus-4-5",
+      "developer": "claude-sonnet-4-5",
+      "tester": "claude-sonnet-4-5",
+      "reviewer": "claude-sonnet-4-5",
+      "deployer": "claude-haiku-4-5",
+      "security": "claude-opus-4-5",
+      "memory": "claude-haiku-4-5"
+    },
+    "costOptimization": true,
+    "fallback": "openai"
+  },
+
+  "projects": [
+    {
+      "name": "ClubFlow",
+      "repo": "antonioneto19/ClubFlow",
+      "stack": ["nextjs", "supabase", "stripe"],
+      "deploy": "vercel",
+      "strategy": "full-stack-development",
+      "agents": ["architect", "developer", "tester", "reviewer", "deployer", "memory", "security"]
+    },
+    {
+      "name": "VetBooking",
+      "repo": "antonioneto19/VetBooking",
+      "stack": ["nextjs", "fastapi", "postgresql", "supabase"],
+      "deploy": "vercel",
+      "strategy": "full-stack-development",
+      "agents": ["architect", "developer", "tester", "reviewer", "deployer", "memory", "security"]
+    },
+    {
+      "name": "PetSkin",
+      "repo": "antonioneto19/landing-page-Petskin-cursos-dra-cristiane-freitas",
+      "stack": ["nextjs", "supabase", "stripe"],
+      "deploy": "vercel",
+      "strategy": "ecommerce-development",
+      "agents": ["architect", "developer", "tester", "reviewer", "deployer"]
+    },
+    {
+      "name": "Bridge-Command-Center",
+      "repo": "antonioneto19/Bridge-Command-Center",
+      "stack": ["nextjs", "fastapi", "supabase"],
+      "deploy": "vercel",
+      "strategy": "full-stack-development",
+      "agents": ["architect", "developer", "tester", "reviewer", "deployer", "memory", "security"]
+    },
+    {
+      "name": "CONSULTORIA-ECOCIL",
+      "repo": "antonioneto19/CONSULTORIA-ECOCIL",
+      "stack": ["automation", "reporting"],
+      "strategy": "process-automation",
+      "agents": ["architect", "developer", "security", "reviewer", "deployer"]
+    },
+    {
+      "name": "laconelli-brand",
+      "repo": "antonioneto19/laconelli-brand",
+      "stack": ["nextjs", "ecommerce"],
+      "deploy": "vercel",
+      "strategy": "brand-digital",
+      "agents": ["architect", "developer", "reviewer", "deployer"]
+    }
+  ],
+
+  "security": {
+    "lgpd": true,
+    "encryption": "AES-256",
+    "secretsBackend": "github-secrets",
+    "auditLog": true,
+    "dataRetentionDays": 365,
+    "noSecretsInLogs": true
+  },
+
+  "schedule": {
+    "dailySwarm": "0 8 * * 1-5",
+    "securityScan": "30 8 * * 1-5",
+    "memorySync": "0 18 * * 1-5",
+    "weeklyReport": "0 9 * * 1",
+    "timezone": "America/Fortaleza"
+  },
+
+  "costControl": {
+    "githubActionsbudgetUSD": 5,
+    "stopOnBudgetExceeded": true,
+    "preferredModels": "haiku-for-simple-tasks",
+    "parallelJobsLimit": 3,
+    "scheduleOnly_on_main_push": true
+  }
+}
