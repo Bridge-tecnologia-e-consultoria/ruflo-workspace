@@ -1,5 +1,5 @@
 # Ruflo Workspace — Super Estrutura de IA Multi-Agente
-## Liderança Tech | antonioneto19
+## Bridge tecnologia e consultoria | antonioneto19
 
 > **Ruflo v3.6** — Plataforma de meta-agentes para Claude Code, Codex e GitHub.
 > 100+ agentes especializados | 314 ferramentas MCP | Memória vetorial | CI/CD automatizado
