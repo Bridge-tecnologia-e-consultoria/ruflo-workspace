@@ -16,6 +16,7 @@ Este arquivo é a fonte de verdade para o estado de configuração Ruflo em todo
 | Bridge-Command-Center | ✅ | ✅ | ✅ | ✅ | **COMPLETO** |
 | CONSULTORIA-ECOCIL | ✅ | ✅ | ✅ | ✅ | **COMPLETO** |
 | laconelli-brand | ✅ | ✅ | ✅ | ✅ | **COMPLETO** |
+| bridgetech-site | ✅ | ✅ | ✅ | ✅ | **COMPLETO** |
 | ruflo-workspace | ✅ | - | - | - | **CENTRAL** |
 
 ## Arquitetura Ruflo por Projeto
@@ -67,6 +68,14 @@ Este arquivo é a fonte de verdade para o estado de configuração Ruflo em todo
 - **Estratégia**: brand-digital
 - **Deploy**: Vercel
 - **URL**: https://github.com/antonioneto19/laconelli-brand
+
+### BRIDGE Site (Site Institucional)
+- **Stack**: Next.js + Tailwind CSS + Netlify
+- **Agentes**: architect, developer, reviewer, deployer, security
+- **Topologia**: hierarchical (5 agentes)
+- **Estratégia**: brand-digital
+- **Deploy**: Netlify
+- **URL**: https://github.com/antonioneto19/bridgetech-site
 
 ## Secrets Necessários (por repositório)
 

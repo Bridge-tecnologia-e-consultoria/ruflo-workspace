@@ -3,7 +3,6 @@
   "workspace": "ruflo-workspace",
   "owner": "antonioneto19",
   "description": "Ruflo MCP central configuration for all Lideranca Tech projects",
-  
   "mcp": {
     "server": {
       "host": "localhost",
@@ -28,7 +27,6 @@
       "project-docs"
     ]
   },
-
   "swarm": {
     "topology": "hierarchical",
     "maxAgents": 7,
@@ -39,7 +37,6 @@
       "ttl": 2592000
     }
   },
-
   "routing": {
     "primary": "anthropic",
     "models": {
@@ -54,57 +51,137 @@
     "costOptimization": true,
     "fallback": "openai"
   },
-
   "projects": [
     {
       "name": "ClubFlow",
       "repo": "antonioneto19/ClubFlow",
-      "stack": ["nextjs", "supabase", "stripe"],
+      "stack": [
+        "nextjs",
+        "supabase",
+        "stripe"
+      ],
       "deploy": "vercel",
       "strategy": "full-stack-development",
-      "agents": ["architect", "developer", "tester", "reviewer", "deployer", "memory", "security"]
+      "agents": [
+        "architect",
+        "developer",
+        "tester",
+        "reviewer",
+        "deployer",
+        "memory",
+        "security"
+      ]
     },
     {
       "name": "VetBooking",
       "repo": "antonioneto19/VetBooking",
-      "stack": ["nextjs", "fastapi", "postgresql", "supabase"],
+      "stack": [
+        "nextjs",
+        "fastapi",
+        "postgresql",
+        "supabase"
+      ],
       "deploy": "vercel",
       "strategy": "full-stack-development",
-      "agents": ["architect", "developer", "tester", "reviewer", "deployer", "memory", "security"]
+      "agents": [
+        "architect",
+        "developer",
+        "tester",
+        "reviewer",
+        "deployer",
+        "memory",
+        "security"
+      ]
     },
     {
       "name": "PetSkin",
       "repo": "antonioneto19/landing-page-Petskin-cursos-dra-cristiane-freitas",
-      "stack": ["nextjs", "supabase", "stripe"],
+      "stack": [
+        "nextjs",
+        "supabase",
+        "stripe"
+      ],
       "deploy": "vercel",
       "strategy": "ecommerce-development",
-      "agents": ["architect", "developer", "tester", "reviewer", "deployer"]
+      "agents": [
+        "architect",
+        "developer",
+        "tester",
+        "reviewer",
+        "deployer"
+      ]
     },
     {
       "name": "Bridge-Command-Center",
       "repo": "antonioneto19/Bridge-Command-Center",
-      "stack": ["nextjs", "fastapi", "supabase"],
+      "stack": [
+        "nextjs",
+        "fastapi",
+        "supabase"
+      ],
       "deploy": "vercel",
       "strategy": "full-stack-development",
-      "agents": ["architect", "developer", "tester", "reviewer", "deployer", "memory", "security"]
+      "agents": [
+        "architect",
+        "developer",
+        "tester",
+        "reviewer",
+        "deployer",
+        "memory",
+        "security"
+      ]
     },
     {
       "name": "CONSULTORIA-ECOCIL",
       "repo": "antonioneto19/CONSULTORIA-ECOCIL",
-      "stack": ["automation", "reporting"],
+      "stack": [
+        "automation",
+        "reporting"
+      ],
       "strategy": "process-automation",
-      "agents": ["architect", "developer", "security", "reviewer", "deployer"]
+      "agents": [
+        "architect",
+        "developer",
+        "security",
+        "reviewer",
+        "deployer"
+      ]
     },
     {
       "name": "laconelli-brand",
       "repo": "antonioneto19/laconelli-brand",
-      "stack": ["nextjs", "ecommerce"],
+      "stack": [
+        "nextjs",
+        "ecommerce"
+      ],
       "deploy": "vercel",
       "strategy": "brand-digital",
-      "agents": ["architect", "developer", "reviewer", "deployer"]
+      "agents": [
+        "architect",
+        "developer",
+        "reviewer",
+        "deployer"
+      ]
+    },
+    {
+      "name": "bridgetech-site",
+      "repo": "antonioneto19/bridgetech-site",
+      "stack": [
+        "nextjs",
+        "tailwind",
+        "netlify"
+      ],
+      "deploy": "netlify",
+      "strategy": "brand-digital",
+      "agents": [
+        "architect",
+        "developer",
+        "reviewer",
+        "deployer",
+        "security"
+      ]
     }
   ],
-
   "security": {
     "lgpd": true,
     "encryption": "AES-256",
@@ -113,7 +190,6 @@
     "dataRetentionDays": 365,
     "noSecretsInLogs": true
   },
-
   "schedule": {
     "dailySwarm": "0 8 * * 1-5",
     "securityScan": "30 8 * * 1-5",
@@ -121,7 +197,6 @@
     "weeklyReport": "0 9 * * 1",
     "timezone": "America/Fortaleza"
   },
-
   "costControl": {
     "githubActionsbudgetUSD": 5,
     "stopOnBudgetExceeded": true,
