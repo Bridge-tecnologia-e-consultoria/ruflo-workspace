@@ -1,0 +1,38 @@
+# CODEOWNERS - Bridge Tecnologia e Consultoria
+# Define revisores obrigatórios por área de código
+# Formato: <padrão> <proprietário(s)>
+
+# Regra padrão: tudo que não for coberto abaixo
+*                     @antonioneto19
+
+# Configurações de CI/CD e infraestrutura
+/.github/             @antonioneto19
+/.github/workflows/   @antonioneto19
+
+# Documentação
+*.md                  @antonioneto19
+/docs/                @antonioneto19
+
+# Configurações de segurança
+*.env.example         @antonioneto19
+/config/              @antonioneto19
+
+# Código de backend
+/src/api/             @antonioneto19
+/src/services/        @antonioneto19
+/src/database/        @antonioneto19
+
+# Código de frontend
+/src/components/      @antonioneto19
+/src/pages/           @antonioneto19
+
+# Testes
+/tests/               @antonioneto19
+/src/**/*.test.*      @antonioneto19
+/src/**/*.spec.*      @antonioneto19
+
+# Scripts de build e deploy
+package.json          @antonioneto19
+Dockerfile            @antonioneto19
+docker-compose*.yml   @antonioneto19
+vercel.json           @antonioneto19
