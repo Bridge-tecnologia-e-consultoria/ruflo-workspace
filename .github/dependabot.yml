@@ -1,0 +1,53 @@
+version: 2
+updates:
+  # npm / Node.js dependencies
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "06:00"
+      timezone: "America/Fortaleza"
+    open-pull-requests-limit: 10
+    reviewers:
+      - "antonioneto19"
+    labels:
+      - "recurso"
+      - "tech-debt"
+    commit-message:
+      prefix: "chore(deps)"
+    groups:
+      production-dependencies:
+        dependency-type: "production"
+      development-dependencies:
+        dependency-type: "development"
+
+  # GitHub Actions dependencies
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "06:00"
+      timezone: "America/Fortaleza"
+    open-pull-requests-limit: 5
+    reviewers:
+      - "antonioneto19"
+    labels:
+      - "recurso"
+    commit-message:
+      prefix: "chore(actions)"
+
+  # Python dependencies (se houver)
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "06:00"
+      timezone: "America/Fortaleza"
+    open-pull-requests-limit: 5
+    labels:
+      - "recurso"
+    commit-message:
+      prefix: "chore(deps-py)"
